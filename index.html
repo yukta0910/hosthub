@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colorlib|Free Bootstrap Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+  body {
+    overflow-x: hidden;
+    /* overflow-y: scroll ; by-default*/
+  }
+
+  header {
+    width: 100vw;
+    position: fixed;
+    box-shadow: 1px 1px 7px rgb(137, 135, 135);
+    z-index: 1;
+  }
+  
+
+  header a:hover{
+    color: #6247ea;
+  }
+
+  .navbar .navbar-brand {
+    padding: 10px 80px;
+  }
+
+  /* a:active {
+    color: #6247ea;
+    background-color: transparent;
+    text-decoration: none;
+  } */
+
+  .container_main {
+    background-color: #6247ea;
+    color: white;
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    column-gap: 120px;
+    padding: 150px;
+    align-items: center;
+  }
+
+  .container_main p {
+    color: #bdb3f0;
+  }
+
+  .container_main button {
+    height: 50px;
+    width: 230px;
+    background-color: #ec9d5f;
+    color: white;
+  }
+
+  .container_main button:hover {
+    background-color: #ec9d5f;
+    color: #6247ea;
+    transition-duration: 0.5s;
+  }
+
+  text {
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+  }
+
+  .features {
+    /* height: 70vh; */
+    background-color: white;
+    text-align: center;
+    /* margin: 50px; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap:wrap; */
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .sum {
+    padding: 40px;
+  }
+
+  .features .p {
+    font-size: 15px;
+    color: rgb(99, 97, 97);
+    /* margin: 10px; */
+    font-weight: 200;
+  }
+
+  .features .h1 {
+    /* margin: 30px; */
+    font-size: 37px;
+
+  }
+
+  .features .card {
+    height: 300px;
+    /* height: auto; */
+    width: 250px;
+    display: flex;
+    /* overflow-x: hidden; */
+  }
+
+  .features .card:hover {
+    box-shadow: 1px 1px 5px #807e87;
+    transform: scale(1.03, 1.03);
+    transition-delay: .2s;
+  }
+
+  .tables {
+    /* height: 100vh; */
+
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    background-color: #fafcff;
+    text-align: center;
+  }
+
+  .tables h1 {
+    font-size: 37px;
+  }
+
+  .tables p {
+
+    font-size: 15px;
+    color: rgb(99, 97, 97);
+    margin: 10px;
+  }
+
+  .tables .row {
+    /* padding: 50px; */
+  }
+
+  .request {
+    background-color: #ec9d5f;
+    height: 60vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .request h1 {
+    font-size: 37px;
+    color: white;
+  }
+
+  .request p {
+    font-size: 15px;
+    color: whitesmoke;
+    margin: 10px;
+  }
+
+  .request button {
+    background-color: white;
+    margin: 30px;
+    height: 50px;
+    font-size: 15px;
+    width: 250px;
+  }
+
+  .request button:hover {
+    background-color: #6247ea;
+    color: white;
+    transition-duration: 0.5s;
+  }
+
+  .saysaboutus {
+    /* height: 70vh; */
+    background-color: white;
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .saysaboutus h1 {
+    font-size: 37px;
+  }
+
+  .saysaboutus p {
+    font-size: 15px;
+    color: rgb(99, 97, 97);
+
+  }
+
+  .saysaboutus .one {
+    height: 250px;
+    width: 350px;
+  }
+
+  .saysaboutus .card {
+    height: 250px;
+    width: 350px;
+  }
+
+  .saysaboutus .card:hover {
+    box-shadow: 1px 1px 5px #807e87;
+    transform: scale(1.03, 1.03);
+    transition-delay: .2s;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .saysaboutus {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* @media screen and (max-width:1000px){
+    .tables .row{
+      width: 1000px;
+    }
+  } */
+
+  .servicesprovided {
+    background-image: url("blob.jpeg");
+    /* height: 100vh; */
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .servicesprovided h1 {
+    font-size: 37px;
+    color: white;
+  }
+
+  .servicesprovided p {
+    font-size: 15px;
+    color: rgb(198, 196, 196);
+  }
+
+  .servicesprovided .row {
+    margin: 40px;
+  }
+
+  .servicesprovided .card {
+    /* opacity: 20%;  */
+    background: none;
+    border: 1px solid white;
+    height: 200px;
+    color: whitesmoke;
+  }
+
+  .servicesprovided .card:hover {
+    opacity: 100%;
+    background-color: white;
+    transition-duration: 0.5s;
+    color: black;
+  }
+
+
+  /* .servicesprovided .col{
+    border: 2px solid white;
+  } */
+
+  .latestpost {
+    /* height: 100vh; */
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    /* gap: 10px; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+  .latestpost .card {
+    height: 350px;
+    width: 400px;
+    display: flex;
+    /* text-align: center; */
+    padding: 10px;
+    /* border: 1px solid black; */
+  }
+
+  .latestpost .card:hover {
+    box-shadow: 1px 1px 5px #807e87;
+    transform: scale(1.03, 1.03);
+    transition-delay: .2s;
+
+  }
+
+  .latestpost .date {
+    height: 25px;
+    width: 130px;
+    border-radius: 3.5px;
+    text-align: center;
+    background-color: #ec9d5f;
+    display: inline-block;
+  }
+
+  .latestpost a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+  }
+
+  .latestpost a:hover {
+    color: #6247ea;
+  }
+
+
+  .footer {
+    padding: 50px;
+    background-color: #04091e;
+    color: whitesmoke;
+  }
+
+  .footer a {
+    color: rgb(165, 163, 163);
+  }
+
+  .footer a:hover {
+    color: rgb(165, 163, 163);
+  }
+
+  .footer button {
+    background-color: #6247ea;
+    border-radius: 20px;
+  }
+
+  .footer button:hover {
+    background-color: transparent;
+    color: #6247ea;
+    border: 2px solid #6247ea;
+  }
+
+  .footer input {
+    border-radius: 20px;
+
+  }
+</style>
+
+<body>
+  <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./logo.png.webp" alt="Logo" width="130" height="45" class="d-inline-block align-text-top">
+        </a>
+        <div class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/services.html">SERVICES</a>
+                </li>
+
+                <div class="dropdown-center">
+                  <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    PAGES
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">FEATURES</a></li>
+                    <li><a class="dropdown-item" href="#">PRICING</a></li>
+                    <li><a class="dropdown-item" href="#">ELEMENTS</a></li>
+                  </ul>
+                </div>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">PAGES</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container_main">
+    <div class="text">
+      <h1>WE'RE WEB HOSTING PROFESSIONALS</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto harum ad quidem quod repellendus
+        asperiores nisi veniam temporibus ex, delectus corrupti itaque nemo libero voluptates adipisci aspernatur
+        dolorem sequi ipsa vero? Doloribus, assumenda?</p>
+
+      <button type="button" class="btn">Explore Our Features</button>
+    </div>
+    <div class="img"><img src="./banner-map.png.webp" alt="">
+    </div>
+  </div>
+
+  <!-- Some Features that Made us Unique -->
+  <div class="features">
+    <div class="sum">
+      <div class="h1">
+        <h1>Some Features that Made us Unique</h1>
+      </div>
+      <div class="p">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit doloribus nihil numquam neque.</p>
+      </div>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-1 g-4">
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Choose Your Best Pricing Plans -->
+  <div class="tables">
+    <h1>Choose Your Best Pricing Plans</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum accusantium dolor officiis debitis. Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Quidem, qui!</p>
+
+    <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 row-cols-sm-1  mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Basic</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$39<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Starter</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$59<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Bussiness</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$79<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$99<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Looking for a Custom Solution? -->
+  <div class="request">
+    <div class="solution">
+      <h1>Looking for a Custom Solution?</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam recusandae maiores enim.
+      </p>
+    </div>
+    <button type="button" class="btn">Request Free Consultation</button>
+  </div>
+
+  <!-- Client says about us -->
+  <div class="saysaboutus">
+    <div class="one">
+      <h1>What our Client’s Say about us</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit ratione ipsam ut reiciendis, distinctio quo,
+        autem dolore deleniti quia qui deserunt fuga dolor officiis itaque ducimus facilis eos sint rem inventore nobis
+        aliquid cupiditate?</p>
+    </div>
+
+    <div class="row row-cols-exsm-1">
+      <div class="col-sm-6 mb-3 mb-sm-0 d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Services We Provide -->
+  <div class="servicesprovided">
+    <div class="combine">
+      <h1>Top Services We Provide</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia quasi voluptates.</p>
+    </div>
+
+
+    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-4">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-app-indicator" viewBox="0 0 16 16">
+              <path d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5V8a.5.5 0 0 1 1 0v2.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 1 10.5v-5A4.5 4.5 0 0 1 5.5 1H8a.5.5 0 0 1 0 1H5.5z"/>
+              <path d="M16 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            </svg> -->
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Latest Posts From Our Blog -->
+  <div class="latestpost">
+    <h1>Latest Posts From Our Blog</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In voluptates itaque dolore!</p>
+
+
+    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-1 g-4">
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <div class="date">
+              <p>10 April 2020</p>
+            </div>
+            <a href="#">
+              <h4>Benjamin Franklin S Method Of Habit Formation</h4>
+            </a>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <div class="date">
+              <p>10 April 2020</p>
+            </div>
+            <a href="#">
+              <h4>Benjamin Franklin S Method Of Habit Formation</h4>
+            </a>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-center align-items-center">
+        <div class="card">
+          <div class="card-body">
+            <div class="date">
+              <p>10 April 2020</p>
+            </div>
+            <a href="#">
+              <h4>Benjamin Franklin S Method Of Habit Formation</h4>
+            </a>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+              content.This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <div class="boxes">
+      <div class="col-lg-4">
+        <div class="l_blog_item">
+          <h6>10 April, 2018</h6>
+          <a href="#">
+            <h4>Benjamin Franklin S Method Of Habit Formation</h4>
+          </a>
+          <p>There are many kinds of narratives and organizing principles. Science is driven by evidence gathered in
+            experiments, and by the falsification of extant theories and their </p>
+          <div class="view_text">
+            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i>4.5k Views</a>
+            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i>07</a>
+            <a href="#"><i class="fa fa-share" aria-hidden="true"></i>362</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="l_blog_item">
+          <h6>10 April, 2018</h6>
+          <a href="#">
+            <h4>Benjamin Franklin S Method Of Habit Formation</h4>
+          </a>
+          <p>There are many kinds of narratives and organizing principles. Science is driven by evidence gathered in
+            experiments, and by the falsification of extant theories and their </p>
+          <div class="view_text">
+            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i>4.5k Views</a>
+            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i>07</a>
+            <a href="#"><i class="fa fa-share" aria-hidden="true"></i>362</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="l_blog_item">
+          <h6>10 April, 2018</h6>
+          <a href="#">
+            <h4>Benjamin Franklin S Method Of Habit Formation</h4>
+          </a>
+          <p>There are many kinds of narratives and organizing principles. Science is driven by evidence gathered in
+            experiments, and by the falsification of extant theories and their </p>
+          <div class="view_text">
+            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i>4.5k Views</a>
+            <a href="#"><i class="fa fa-commenting" aria-hidden="true"></i>07</a>
+            <a href="#"><i class="fa fa-share" aria-hidden="true"></i>362</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Top Products</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Managed Website</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Manage Reputation</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Power Tools</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 ">Marketing Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2022 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
